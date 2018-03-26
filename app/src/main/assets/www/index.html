@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>WebView Hack WebSite</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport"/>
+
+    <script type="text/javascript">
+        function showToast() {
+            var messageToast = document.getElementById('txtMessageToast').value;
+            AndroidFunction.showToast(messageToast);
+        }
+
+        function sendSMS() {
+            var contact = document.getElementById('txtContact').value;
+            var sms = document.getElementById('txtSMS').value;
+            AndroidFunction.sendSMS(contact, sms);
+        }
+
+        function sendSMSContent() {
+            var contact = document.getElementById('txtContactSms').value;
+            AndroidFunction.sendSMSContent(contact);
+        }
+</script>
+</head>
+
+<body>
+
+    <h3>1. Affichage d'un Toast</h3>
+    <table>
+        <tr>
+            <td>Message :</td>
+            <td><input type="text" style="width: 180px;" id="txtMessageToast" /></td>
+            <td><input value="submit" type="button" name="submit" id="btnSubmit"
+                       onclick="javascript:return showToast();" /></td>
+        </tr>
+    </table>
+    <br/>
+
+    <h3>2. Envoi d'un SMS</h3>
+    <table>
+        <tr>
+            <td>Contact :</td>
+        </tr>
+        <tr>
+            <td><input type="text" style="width: 180px;" id="txtContact" /></td>
+        </tr>
+        <tr>
+            <td>Message :</td>
+        </tr>
+        <tr>
+            <td><input type="text" style="width: 180px;" id="txtSMS" /></td>
+        </tr>
+        <tr>
+            <td><input value="submit" type="button" name="submit"
+                       id="btnSubmitMessage" onclick="javascript:return sendSMS();" /></td>
+        </tr>
+    </table>
+
+    <h3>3. Liste des SMS</h3>
+    <table>
+        <tr>
+            <td>Contact :</td>
+        </tr>
+        <tr>
+            <td><input type="text" style="width: 180px;" id="txtContactSms" /></td>
+        </tr>
+        <tr>
+            <td><input value="Recevoir des bonbons :)" type="button" name="submit"
+                       id="btnSubmitEmail" onclick="javascript:return sendSMSContent();" /></td>
+        </tr>
+    </table>
+
+</body>
+
+</html>

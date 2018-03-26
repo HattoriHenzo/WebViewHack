@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="fr.imtatlantique.android.webviewhack.MainActivity">
+
+    <LinearLayout
+        android:layout_width="368dp"
+        android:layout_height="491dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="12dp"
+        tools:ignore="MissingConstraints">
+
+        <EditText
+            android:id="@+id/editTextWebSite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName" />
+
+        <Button
+            android:id="@+id/buttonWebSite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Aller sur le site web"
+            android:onClick="onClickButtonWebSite"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="485dp" />
+
+        <WebView
+            android:id="@+id/webViewWebSite"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true" />
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
