@@ -3,7 +3,7 @@ package fr.imtatlantique.android.webviewhack.utils;
 import android.telephony.SmsManager;
 
 /**
- * Classe qui envoi des SMS
+ * Classe qui envoi des SMS sans Intent
  * Created by SOMBUGMA Emmanuel on 25/03/2018.
  */
 
