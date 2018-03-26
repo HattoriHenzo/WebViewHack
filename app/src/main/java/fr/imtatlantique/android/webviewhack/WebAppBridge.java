@@ -70,6 +70,10 @@ public class WebAppBridge {
         }
     }
 
+    /**
+     * Fonction qui permet d'afficher un message dans une boît de dialogue
+     * @param message à afficher
+     */
     private void showMessage(String message) {
         AlertDialog alertDialog = new AlertDialog.Builder(context).create();
         alertDialog.setTitle("Alert");
