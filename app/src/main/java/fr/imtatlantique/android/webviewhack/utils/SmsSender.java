@@ -11,11 +11,15 @@ public class SmsSender {
 
     private SmsManager smsManager = SmsManager.getDefault();
 
-
     public SmsSender() {
 
     }
 
+    /**
+     * Fonction qui envoie un sms
+     * @param contact celui à qui est destiné le SMS
+     * @param sms envoyé
+     */
     public void sendSms(String contact, String sms) {
         smsManager.sendTextMessage(contact, null, sms, null, null);
     }
