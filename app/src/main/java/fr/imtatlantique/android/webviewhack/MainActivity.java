@@ -24,11 +24,9 @@ public class MainActivity extends AppCompatActivity {
 
         // On initialise le web view
         webView = (WebView)findViewById(R.id.webViewWebSite);
-
         // Activation de l'exécution du code JavaScript dans le web view : "Bonjour les dégâts !"
         WebSettings webSettings = webView.getSettings();
         webSettings.setJavaScriptEnabled(true);
-
         // Déclaration d'une classe permettant de manipuler du code Java dans du JavaScript : "De mal en pire !"
         webView.addJavascriptInterface(new WebAppBridge(this), "AndroidFunction");
         // On récupère l'URL
